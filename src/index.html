@@ -19,14 +19,10 @@
 
     <script src="js/audio.js"></script>
     <script>
-        $('playButton').on('click', (e) => {
+        $('#playButton').on('click', (e) => {
             let song = new Audio('audio/applause.wav');
             song.play();
         });
-
-        function playTrack() {
-            audioEl.setAttribute('src', 'audio/applause.wav');
-        }
     </script>
 </body>
 
