@@ -14,17 +14,14 @@
 <body>
     <h1>jQuery Audio Demo</h1>
     <div id="word">
+        <img id="playButton" src="img/play.png" alt="play button image">
     </div>
 
     <script src="js/audio.js"></script>
     <script>
-        const audioEl = document.getElementById('applause');
-
-        $('div').on('click', (e) => {
-            let audio = `<audio controls>
-            <source src="audio/applause.wav" type="audio/wav">
-            </audio>`
-            $('#word').append(audio);
+        $('playButton').on('click', (e) => {
+            let song = new Audio('audio/applause.wav');
+            song.play();
         });
 
         function playTrack() {
